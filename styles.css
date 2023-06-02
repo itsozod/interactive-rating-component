@@ -1,0 +1,139 @@
+*, 
+*::before, 
+a::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: darkslategrey;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container { 
+    width: 500px;
+    height: 490px;
+    padding: 40px;
+    background-color: hsl(230, 19%, 18%);
+    border-radius: 25px;
+}
+.thank-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: animate .5s forwards;
+}
+@keyframes animate {
+    0% {
+        transform: translateX(-100%); opacity: 0;
+    }
+    100% {
+        transform: translateX(0); opacity: 1;
+    }
+    
+}
+.thank {
+    width: 200px;
+    height: auto;
+}
+.selected {
+    background-color: hsl(205, 19%, 18%);
+    padding: 10px;
+    border-radius: 25px;
+    color: hsl(25, 97%, 53%);
+}
+.img-star {
+    margin-top: 10px;
+    background-color: hsl(205, 19%, 18%);
+    padding: 20px;
+    border-radius: 25px;
+}
+h1 {
+    font-size: 35px;
+    color: white;
+}
+p {
+    font-size: 20px;
+    color: white;
+}
+.button-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: hsl(205, 19%, 18%);
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+button:hover {
+    background-color: hsl(217, 12%, 63%);
+}
+button.active {
+    background-color: hsl(25, 97%, 53%);
+}
+#submit {
+    margin-top: 35px;
+    padding: 10px;
+    width: 420px;
+    background-color: hsl(25, 97%, 53%);
+    font-size: 20px;
+    font-weight: bold;
+}
+#submit:active {
+    color: hsl(25, 97%, 53%);
+    background-color:  hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 525px) {
+    .container {
+        width: 450px;
+    }
+    #submit {
+        width: 380px;
+    }
+    
+}
+@media screen and (max-width: 472px) {
+    .container {
+        width: 400px;
+    }
+    #submit {
+        width: 325px;
+    }
+    
+}
+@media screen and (max-width: 420px) {
+    .container {
+        width: 350px;
+    }
+    #submit {
+        width: 275px;
+    }
+    
+}
+@media screen and (max-width: 359px) {
+    .container {
+        width: 300px;
+        height: 550px;
+    }
+    #submit {
+        width: 225px;
+    }
+}
+button {
+    width: 40px;
+    height: 40px;
+}
